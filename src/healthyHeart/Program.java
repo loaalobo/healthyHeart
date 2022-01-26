@@ -9,5 +9,6 @@ public class Program {
         h.exibeIdade();
         h.exibeFreqMax();
         h.exibeFreqAlvo();
+        h.avaliacaoFisica();
     }
 }

@@ -14,15 +14,15 @@ public class HeartRates {
     // Construtor
     public HeartRates() {
         Scanner s = new Scanner(System.in);
-        System.out.println("Nome: ");
+        System.out.print("Nome: ");
         this.setNome(s.nextLine());
-        System.out.println("Sobrenome: ");
+        System.out.print("Sobrenome: ");
         this.setSobrenome(s.nextLine());
-        System.out.println("Dia do nascimento: ");
+        System.out.print("Dia do nascimento: ");
         this.setDiaNasc(s.nextInt());
-        System.out.println("Mês do nascimento: ");
+        System.out.print("Mês do nascimento: ");
         this.setMesNasc(s.nextInt());
-        System.out.println("Ano do nascimento: ");
+        System.out.print("Ano do nascimento: ");
         this.setAnoNasc(s.nextInt());
     }
 
@@ -52,16 +52,23 @@ public class HeartRates {
         System.out.println("Frequência cardíaca máxima: " + calcFreqMax() + " bpm");
     }
 
-    public double calcFreqAlvoMin() {
-        return calcFreqMax() * 0.5;
-    }
+    public double calcFreqAlvoMin() { return calcFreqMax() * 0.5; }
 
-    public double calcFreqAlvoMax() {
-        return calcFreqMax() * 0.85;
-    }
+    public double calcFreqAlvoMax() { return calcFreqMax() * 0.85; }
 
     public void exibeFreqAlvo() {
-        System.out.println("Frequência cardíaca alvo: está entre " + calcFreqAlvoMin() + " e " + calcFreqAlvoMax());
+        System.out.println("Frequência cardíaca alvo: entre " + calcFreqAlvoMin() + " e " + calcFreqAlvoMax());
+    }
+
+    public boolean avaliacaoFisica() {
+        System.out.println("** Resultado da avaliação **");
+        if (this.calcFreqMax() <= 200) {
+            System.out.println("Pode praticar exercícios de alta intensidade");
+            return true;
+        } else {
+            System.out.println("Não aconselhamos a prática de exercícios de alta intensidade");
+            return false;
+        }
     }
 
     public String getNome() {return nome;}
