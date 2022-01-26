@@ -27,23 +27,21 @@ public class HeartRates {
     }
 
     // Métodos
-    public void infoUsuario() {
-        System.out.println(
-            "Nome: " + this.getNome() +
-            "\nSobrenome: " + this.getSobrenome() +
-            "\nData de nascimento: " + this.getDiaNasc() +
-            "/" + this.getMesNasc() + "/" + this.getAnoNasc()
-        );
+    public void exibeNomeCompleto() {
+        System.out.println("Nome: " + this.getNome() + " " + this.getSobrenome());
+    }
+
+    public void exibeDataNasc() {
+        System.out.println("Data de nascimento: " + this.getDiaNasc() + "/" + this.getMesNasc() + "/" + this.getAnoNasc());
     }
 
     public int calcIdade() {
         int anoAtual = Year.now().getValue();
         return anoAtual - this.getAnoNasc();
-        //System.out.println("Idade atual: " + idade + " anos");
     }
 
     public void exibeIdade() {
-        System.out.println(calcIdade() + " anos de idade.");
+        System.out.println(calcIdade() + " anos de idade");
     }
 
     public int calcFreqMax() {
