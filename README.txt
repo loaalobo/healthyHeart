@@ -1,4 +1,5 @@
-    Instruções:
+Sistema desenvolvido em Java capaz de calcular a frequência cardíaca máxima de uma pessoa usuária, bem como o intervalo de frequência cardíaca alvo. 
+Este projeto foi desenvolvido com base nas seguintes instruções:
 
     Crie uma classe chamada HeartRates.
     Os atributos da classe devem incluir
@@ -23,4 +24,4 @@
     A alvo é um intervalo entre 50-85% da sua frequência cardíaca máxima.
 
 
-Fonte: https://cursos.alura.com.br/forum/topico-desafios-para-iniciantes-java-61719
+Fonte do desafio: https://cursos.alura.com.br/forum/topico-desafios-para-iniciantes-java-61719
